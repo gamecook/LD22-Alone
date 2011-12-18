@@ -14,6 +14,7 @@ ig.module(
     'impact.debug.debug',
     'game.entities.sword',
     'game.entities.shield',
+    'game.entities.spawnboss',
     'plugins.tween'
 )
 .defines(function(){
