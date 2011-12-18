@@ -31,6 +31,10 @@ MyGame = ig.Game.extend({
         ig.input.bind( ig.KEY.RIGHT_ARROW, 'right' );
         ig.input.bind( ig.KEY.SPACE, 'jump' );
         this.loadLevel( LevelAlone );
+
+        ig.music.add( 'media/sounds/24377__dj-chronos__asteriod-surface-wind.*' );
+        ig.music.volume = 0.2;
+        ig.music.play();
 	},
 	// In your Game class
 	loadLevel: function( data ) {

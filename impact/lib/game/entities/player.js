@@ -2,7 +2,8 @@ ig.module(
 	'game.entities.player'
 )
 .requires(
-	'impact.entity'
+	'impact.entity',
+    'impact.sound'
 )
 .defines(function(){
     EntityPlayer = ig.Entity.extend({
@@ -23,6 +24,9 @@ ig.module(
         maxFallDistance: 20000,
         hasSword: false,
         hasShield: false,
+        /*fallSFX: new ig.Sound('media/sounds/Hit.*'),*/
+        deathSFX: new ig.Sound('media/sounds/Death.*'),
+        powerupSFX: new ig.Sound('media/sounds/Powerup.*'),
         init: function( x, y, settings ) {
         	this.parent( x, y, settings );
             this.setupAnimation();
@@ -82,6 +86,7 @@ ig.module(
             }else {
             	this.currentAnim = this.anims.idle;
                 this.fallDistance = 0;
+
             }
             this.currentAnim.flip.x = this.flip;
 
@@ -103,6 +108,7 @@ ig.module(
             var x = this.startPosition.x;
             var y = this.startPosition.y;
             ig.game.spawnEntity(EntityDeathExplosion, this.pos.x, this.pos.y, {callBack:function(){ig.game.spawnEntity( EntityPlayer, x, y)}} );
+            this.deathSFX.play();
         },
         equip: function(id)
         {
@@ -110,7 +116,7 @@ ig.module(
                 this.hasSword = true
             if(id == "shield")
                 this.hasShield = true;
-
+            this.powerupSFX.play();
             this.setupAnimation();
         }
 
