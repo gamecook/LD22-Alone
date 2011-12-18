@@ -1,7 +1,9 @@
 
 /impact/lib/impact/*
+/impact/lib/weltmeister.html
 /impact/lib/weltmeister/*
 /impact/tools/*
+
 /.idea/*
 Icon
 Thumbs.db
