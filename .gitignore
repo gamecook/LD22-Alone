@@ -1,0 +1,12 @@
+
+/impact/lib/impact/*
+/impact/lib/weltmeister/*
+/impact/tools/*
+/.idea/*
+Icon
+Thumbs.db
+.DS_Store
+
+*.swp
+*~
+*.iml
