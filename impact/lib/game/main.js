@@ -24,7 +24,7 @@ MyGame = ig.Game.extend({
 	// Load a font
 	font: new ig.Font( 'media/04b03.font.png' ),
 	player: null,
-	
+
 	init: function() {
 		// Initialize your game here; bind keys etc.
         ig.input.bind( ig.KEY.LEFT_ARROW, 'left' );
@@ -65,7 +65,7 @@ MyGame = ig.Game.extend({
             }
         }
     },
-	
+
 	draw: function() {
 		// Draw all entities and backgroundMaps
 		this.parent();
