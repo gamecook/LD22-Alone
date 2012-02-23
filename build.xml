@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<project name="ImpactAntPile v1.0.0 Alpha" basedir="." default="full-build">
+
+    <property name="impact.dir" location="${basedir}/impact"/>
+    <property name="deploy.dir"  location="deploy"/>
+
+    <target name="full-build">
+        
+        <!-- Run the bake script - you need PHP to be runnable from the command line. -->
+        <exec dir="${impact.dir}" executable="php">
+            <arg value="${impact.dir}/tools/bake.php"/>
+            <arg value="lib/impact/impact.js"/>
+            <arg value="lib/game/main.js"/>
+            <arg value="game.min.js"/>
+        </exec>
+
+        <!-- Copy over the impact directory to the deploy folder and ignore what is not needed. -->
+        <sync todir="${deploy.dir}">
+            <fileset dir="${impact.dir}">
+                <exclude name="weltmeister.html"/>
+                <exclude name="**/tools/*"/>
+                <exclude name="**/lib/**"/>
+            </fileset>
+        </sync>
+        
+        <!-- replace js source paths in HTML with minified game js. Make sure code is surrounded by "source script" comments so the regex can find it. -->
+        <replaceregexp file="${deploy.dir}/index.html"
+                       match="\&lt;!--source scripts--\&gt;(.*?)\&lt;!--end source scripts--\&gt;"
+                       replace="\&lt;script src='game.min.js'\&gt;\&lt;/script\&gt;" flags="gs">
+        </replaceregexp>
+        <!-- this is optional and requires ant-contrib.jar. This will copy over debug CSS if game is running in debug mode. -->
+        <if>
+            <and>
+                <resourcecontains resource="${deploy.dir}/game.min.js" substring="impact.debug.menu"/>
+            </and>
+            <then>
+                <copy file="${impact.dir}/lib/impact/debug/debug.css"
+                      tofile="${deploy.dir}/lib/impact/debug/debug.css"/>
+            </then>
+        </if>
+    </target>
+
+</project>

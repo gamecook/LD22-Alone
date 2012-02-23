@@ -11,7 +11,7 @@ ig.module(
     'game.entities.fountain',
     'game.entities.torrent',
     'game.levels.alone',
-    'impact.debug.debug',
+    /*'impact.debug.debug',*/
     'game.entities.sword',
     'game.entities.shield',
     'game.entities.spawnboss',
