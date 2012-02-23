@@ -27,7 +27,34 @@
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+
+    html,body {
+        background-color: #000;
+        color: #fff;
+        font-family: helvetica, arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 12pt;
+    }
+
+    #canvas {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: 1px solid #555;
+    }
+    .credits
+    {
+        font-size: .8em;
+    }
   </style>
+
+
+
+    <script src='game.min.js'></script>
 </head>
 
 <body>
@@ -45,14 +72,16 @@
     <h1><a href="https://github.com/gamecook/LD22-Alone">LD22-Alone</a>
       <span class="small">by <a href="https://github.com/gamecook">gamecook</a></span></h1>
 
+      <canvas id="canvas"></canvas>
+
     <div class="description">
-      My Ludum Dare Game Source
+      This is my <a href="http://www.ludumdare.com/compo/ludum-dare-22/?action=preview&uid=6843" target="_blank">Ludum Dare #22 Game</a> Source
     </div>
 
     
-      <p>This is a simple game using ImpactJS that was built in 48 hours.</p>
-    
+      <p>This is a simple game using ImpactJS that was built in 48 hours. The text is a poem is by Edgar Alan Poe and game is written in Impact JS.</p>
 
+      </p><table><tr><td colspan=4 align=center><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot0.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/c01d751a189893000a17590fef456dfb.jpg'></a><tr><td><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot1.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/27b7296ba7091c1b21097b5c7c2bcbe0.jpg'></a><td><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot2.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/9fbc2072be79827add90e8c7747e3848.jpg'></a><td><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot3.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/fa48bc199da279490af37e615a0bd6a3.jpg'></a></table><p>
     
       <h2>Dependencies</h2>
       <p>ImpactJS (http://impactjs.com)</p>
@@ -60,7 +89,7 @@
 
     
       <h2>Install</h2>
-      <p>Install impact's source code into the project.</p>
+      <p>You will need a copy of Impact's src which needs to go inside of the <tt>impact/lib folder</tt>. After that simply run the Ant build script and the game should compile into a <tt>deploy</tt> folder.</p>
     
 
     
@@ -82,7 +111,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     
       <h2>Contact</h2>
-      <p>Game Cook (info@gamecook.com)<br/>      </p>
+      <p>Game Cook (info@gamecook.com)
+<br/>      </p>
     
 
     <h2>Download</h2>
