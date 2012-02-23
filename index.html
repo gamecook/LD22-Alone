@@ -1,145 +1,220 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+    <meta charset='utf-8'>
 
-  <title>gamecook/LD22-Alone @ GitHub</title>
+    <title>gamecook/LD22-Alone @ GitHub</title>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #000000;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #ffffff; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #ffffff; }
-    h3 { text-align: center; color: #ffffff; }
-    a { color: #ffffff; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
+    <style type="text/css">
+        body {
+            margin-top: 1.0em;
+            background-color: #000000;
+            font-family: Helvetica, Arial, FreeSans, san-serif;
+            color: #ffffff;
+        }
 
-    html,body {
-        background-color: #000;
-        color: #fff;
-        font-family: helvetica, arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        font-size: 12pt;
-    }
+        #container {
+            margin: 0 auto;
+            width: 700px;
+        }
 
-    #canvas {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        border: 1px solid #555;
-    }
-    .credits
-    {
-        font-size: .8em;
-    }
-  </style>
+        h1 {
+            font-size: 3.8em;
+            color: #ffffff;
+            margin-bottom: 3px;
+        }
 
+        h1 .small {
+            font-size: 0.4em;
+        }
+
+        h1 a {
+            text-decoration: none
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        h3 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .download {
+            float: right;
+        }
+
+        pre {
+            background: #000;
+            color: #fff;
+            padding: 15px;
+        }
+
+        hr {
+            border: 0;
+            width: 80%;
+            border-bottom: 1px solid #aaa
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            font-style: italic;
+        }
+
+        html, body {
+            background-color: #000;
+            color: #fff;
+            font-family: helvetica, arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12pt;
+        }
+
+        #canvas {
+            border: 1px solid #555;
+        }
+
+        .credits {
+            font-size: .8em;
+        }
+
+        table img {
+              border: 1px solid #333;
+        }
+
+    </style>
 
 
     <script src='game.min.js'></script>
 </head>
 
 <body>
-  <a href="https://github.com/gamecook/LD22-Alone"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<a href="https://github.com/gamecook/LD22-Alone"><img style="position: absolute; top: 0; right: 0; border: 0;"
+                                                      src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                                                      alt="Fork me on GitHub"/></a>
 
-  <div id="container">
+<div id="container">
 
     <div class="download">
-      <a href="https://github.com/gamecook/LD22-Alone/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/gamecook/LD22-Alone/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+        <a href="https://github.com/gamecook/LD22-Alone/zipball/master">
+            <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
+        <a href="https://github.com/gamecook/LD22-Alone/tarball/master">
+            <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
     </div>
 
     <h1><a href="https://github.com/gamecook/LD22-Alone">LD22-Alone</a>
-      <span class="small">by <a href="https://github.com/gamecook">gamecook</a></span></h1>
+        <span class="small">by <a href="https://github.com/gamecook">gamecook</a></span></h1>
+    <br/>
+    <div class="description">This is a simple game using ImpactJS that was built in 48 hours for the <a href="http://www.ludumdare.com/compo/ludum-dare-22/?action=preview&uid=6843" target="_blank">Ludum
+        Dare #22</a>. The text is a poem is by Edgar Alan Poe and game
+        is written in Impact JS. </div>
 
-      <canvas id="canvas"></canvas>
+    <canvas id="canvas"></canvas>
 
-    <div class="description">
-      This is my <a href="http://www.ludumdare.com/compo/ludum-dare-22/?action=preview&uid=6843" target="_blank">Ludum Dare #22 Game</a> Source
-    </div>
-
-    
-      <p>This is a simple game using ImpactJS that was built in 48 hours. The text is a poem is by Edgar Alan Poe and game is written in Impact JS.</p>
-
-      </p><table><tr><td colspan=4 align=center><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot0.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/c01d751a189893000a17590fef456dfb.jpg'></a><tr><td><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot1.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/27b7296ba7091c1b21097b5c7c2bcbe0.jpg'></a><td><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot2.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/9fbc2072be79827add90e8c7747e3848.jpg'></a><td><a href='http://www.ludumdare.com/compo/wp-content/compo2/87574/6843-shot3.png' target='_blank'><img src='http://www.ludumdare.com/compo/wp-content/compo2/thumb/fa48bc199da279490af37e615a0bd6a3.jpg'></a></table><p>
-    
-      <h2>Dependencies</h2>
-      <p>ImpactJS (http://impactjs.com)</p>
+    <p>You will need a modern browser that supports HTML5/Canvas to run this game. As of now there is no mobile version, sorry.</p>
     
 
-    
-      <h2>Install</h2>
-      <p>You will need a copy of Impact's src which needs to go inside of the <tt>impact/lib folder</tt>. After that simply run the Ant build script and the game should compile into a <tt>deploy</tt> folder.</p>
-    
+    <h2>Screenshots</h2>
+    <table>
+        <tr>
+            <td colspan=4 align=center><a href='media/thumbs/6843-shot0.png'
+                                          target='_blank'><img
+                    src='media/thumbs/c01d751a189893000a17590fef456dfb.jpg'></a>
+        <tr>
+            <td><a href='media/thumbs/87574/6843-shot1.png' target='_blank'><img
+                    src='media/thumbs/27b7296ba7091c1b21097b5c7c2bcbe0.jpg'></a>
+            <td><a href='media/thumbs/6843-shot2.png' target='_blank'><img
+                    src='media/thumbs/9fbc2072be79827add90e8c7747e3848.jpg'></a>
+            <td><a href='media/thumbs/6843-shot3.png' target='_blank'><img
+                    src='media/thumbs/fa48bc199da279490af37e615a0bd6a3.jpg'></a>
+    </table>
+    <p>
 
-    
-      <h2>License</h2>
-      <p>The MIT License (MIT)
-Copyright (c) 2011-2012 Game Cook, inc.
+    <h2>Dependencies</h2>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    <p>ImpactJS (http://impactjs.com)</p>
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-    
+    <h2>Install</h2>
 
-    
-      <h2>Authors</h2>
-      <p>Jesse Freeman</p>
-    
+    <p>You will need a copy of Impact's src which needs to go inside of the <tt>impact/lib folder</tt>. After that
+        simply run the Ant build script and the game should compile into a <tt>deploy</tt> folder.</p>
 
-    
-      <h2>Contact</h2>
-      <p>Game Cook (info@gamecook.com)
-<br/>      </p>
-    
+
+    <h2>License</h2>
+
+    <p>The MIT License (MIT)
+        Copyright (c) 2011-2012 Game Cook, inc.
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+        documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+        the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and
+        to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of
+        the Software.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+        THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+        CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+        DEALINGS IN THE SOFTWARE.</p>
+
+
+    <h2>Authors</h2>
+
+    <p>Jesse Freeman</p>
+
+
+    <h2>Contact</h2>
+
+    <p>Game Cook (info@gamecook.com)
+        <br/></p>
+
 
     <h2>Download</h2>
+
     <p>
-      You can download this project in either
-      <a href="https://github.com/gamecook/LD22-Alone/zipball/master">zip</a> or
-      <a href="https://github.com/gamecook/LD22-Alone/tarball/master">tar formats.
+        You can download this project in either
+        <a href="https://github.com/gamecook/LD22-Alone/zipball/master">zip</a> or
+        <a href="https://github.com/gamecook/LD22-Alone/tarball/master">tar formats.
     </p>
+
     <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/gamecook/LD22-Alone</pre>
+        by running:
+    <pre>$ git clone git://github.com/gamecook/LD22-Alone</pre>
     </p>
 
     <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/gamecook/LD22-Alone">gamecook/LD22-Alone</a>
+        get the source code on GitHub : <a href="https://github.com/gamecook/LD22-Alone">gamecook/LD22-Alone</a>
     </div>
 
-  </div>
+</div>
 
 <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-18884514-8");
-pageTracker._trackPageview();
-} catch(err) {}</script>"
+    try {
+        var pageTracker = _gat._getTracker("UA-18884514-8");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }</script>
+"
 </body>
 </html>
