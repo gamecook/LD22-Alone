@@ -1,1 +1,1 @@
-You will need a copy of Impact JS (http://impactjs.com) to run this game locally.
+You will need a copy of Impact JS (http://impactjs.com) to run this game locally. Impact's main src directory "impact/lib/impact" needs to be copied over to this project's impact/lib folder. After that simply run the Ant build script and the game should compile into a deploy folder.
